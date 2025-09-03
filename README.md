@@ -6,7 +6,7 @@ Feel free to modify it to your needs.
 
 # Usage
 
-Just before planning to watch something, run the script:
+Just after starting ani-cli run the script in antoher terminal.:
 
 ```bash
 ./safe-anime-episode.sh
