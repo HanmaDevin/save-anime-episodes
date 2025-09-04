@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-REPO="$HOME/safe-anime-episodes/"
+REPO="$HOME/safe-anime-episodes"
 WATCHLIST="$REPO/anime-watchlist.txt"
 
 git -C "$REPO" pull 
