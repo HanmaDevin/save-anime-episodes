@@ -21,9 +21,9 @@ while true; do
     fi
   fi
 
-  git add "$WATCHLIST" > /dev/null
-  git commit -m "added $watching to watchlist" > /dev/null
-  git push > /dev/null
+  git --exec-path="$REPO" add "$WATCHLIST" > /dev/null
+  git --exec-path="$REPO" commit -m "added $watching to watchlist" > /dev/null
+  git --exec-path="$REPO" push > /dev/null
 
   sleep 300 # Check every 5 minutes
 done
