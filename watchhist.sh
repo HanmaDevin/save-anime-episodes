@@ -20,7 +20,7 @@ while true; do
   fi
 
   git add "$WATCHLIST"
-  git commit -m "Update anime watchlist"
+  git commit -m "added $watching to watchlist"
   git push 
 
   sleep 300 # Check every 5 minutes
