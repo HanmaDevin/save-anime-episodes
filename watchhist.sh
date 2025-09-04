@@ -3,7 +3,7 @@
 REPO="$HOME/safe-anime-episodes"
 WATCHLIST="$REPO/anime-watchlist.txt"
 
-git -C "$REPO" pull 
+git -C "$REPO" pull > /dev/null
 
 while true; do
   if ! pgrep -x "ani-cli" > /dev/null; then
@@ -20,9 +20,9 @@ while true; do
     fi
   fi
 
-  git add "$WATCHLIST"
-  git commit -m "added $watching to watchlist"
-  git push 
+  git add "$WATCHLIST" > /dev/null
+  git commit -m "added $watching to watchlist" > /dev/null
+  git push > /dev/null
 
   sleep 300 # Check every 5 minutes
 done
