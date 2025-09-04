@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
-WATCHLIST="$HOME/anime-watchlist.txt"
-LOGFILE="$HOME/.anime-watchlog.txt"
+REPO="$HOME/safe-anime-episodes/"
+WATCHLIST="$REPO/anime-watchlist.txt"
+
+git -C "$REPO" pull 
 
 while true; do
   if ! pgrep -x "ani-cli" > /dev/null; then
@@ -11,12 +13,14 @@ while true; do
   if [[ -n "$watching" ]]; then
     if ! grep -Fxq "$watching" "$WATCHLIST"; then # Check if not already in the list
       echo "Safed: $watching"
-      echo "Safed: $watching" >> "$LOGFILE"
       echo "$watching" >> "$WATCHLIST"
     else
       echo "Already in watchlist: $watching"
-      echo "Already in watchlist: $watching" >> "$LOGFILE"
     fi
   fi
   sleep 300 # Check every 5 minutes
 done
+
+git add "$WATCHLIST"
+git commit -m "Update anime watchlist"
+git push 

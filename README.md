@@ -1,11 +1,13 @@
 # Bash script
 
 This script is used to safe the watch history of anime episodes watched from ani-cli. <br>
-It appends the episode to a text file named `watched_episodes.txt` in the `$HOME` directory. <br>
-Feel free to modify it to your needs.
+It appends the episode to a text file named `watched_episodes.txt` in the `REPO` directory. <br>
+The script should pull the latest `WATCHLIST` file from the specified `REPO` on startup and push the updated `WATCHLIST` file to the `REPO` on exit.
 
 > [!NOTE]
-> There is also a log file created at `$HOME/.anime-watchlog.txt`
+> Modify the `REPO` and `WATCHLIST` variables to your needs.
+
+Feel free to modify it to your needs.
 
 # Usage
 
