@@ -4,7 +4,7 @@ REPO="$HOME/safe-anime-episodes"
 WATCHLIST="$REPO/anime-watchlist.txt"
 
 cd "$REPO"
-git -C "$REPO" pull > /dev/null
+git --exec-path="$REPO" pull > /dev/null
 echo "Last Episode: $(tail -n 1 $WATCHLIST)"
 
 while true; do
