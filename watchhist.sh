@@ -18,9 +18,11 @@ while true; do
       echo "Already in watchlist: $watching"
     fi
   fi
+
+  git add "$WATCHLIST"
+  git commit -m "Update anime watchlist"
+  git push 
+
   sleep 300 # Check every 5 minutes
 done
 
-git add "$WATCHLIST"
-git commit -m "Update anime watchlist"
-git push 
