@@ -4,12 +4,12 @@ REPO="$HOME/safe-anime-episodes"
 WATCHLIST="$REPO/anime-watchlist.txt"
 
 git -C "$REPO" pull > /dev/null
+echo "Last Episode: $(tail -n 1 $WATCHLIST)"
 
 while true; do
   if ! pgrep -x "ani-cli" > /dev/null; then
     break
   fi
-  echo "Last Episode: $(tail -n 1 $WATCHLIST)"
   watching=$(playerctl metadata xesam:title 2>/dev/null) # Get current title
   if [[ -n "$watching" ]]; then
     if ! grep -Fxq "$watching" "$WATCHLIST"; then # Check if not already in the list
