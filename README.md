@@ -9,7 +9,12 @@ The script should pull the latest `WATCHLIST` file from the specified `REPO` on 
 
 Feel free to modify it to your needs.
 
-# Usage
+## Requirements
+
+- `playerctl`
+- `ani-cli`
+
+## Usage
 
 1. Make the script executable:
 
