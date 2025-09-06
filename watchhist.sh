@@ -14,7 +14,7 @@ while true; do
   watching=$(playerctl metadata xesam:title 2>/dev/null) # Get current title
   if [[ -n "$watching" ]]; then
     if ! grep -Fxq "$watching" "$WATCHLIST"; then # Check if not already in the list
-      echo "Safed: $watching"
+      echo "Saved: $watching"
       echo "$watching" >> "$WATCHLIST"
     else
       echo "Already in watchlist: $watching"
