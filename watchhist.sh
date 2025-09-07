@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-REPO="$HOME/safe-anime-episodes"
+REPO="$HOME/save-anime-episodes"
 WATCHLIST="$REPO/anime-watchlist.txt"
 
 cd "$REPO"
