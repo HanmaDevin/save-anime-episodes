@@ -1,14 +1,14 @@
 #!/usr/bin/bash
 
-REPO="$HOME/save-anime-episodes"
-WATCHLIST="$REPO/anime-watchlist.txt"
+REPO="$HOME/save-mpv-history"
+WATCHLIST="$REPO/mpv-history.txt"
 
 cd "$REPO"
 git --exec-path="$REPO" pull > /dev/null
 echo "Last Episode: $(tail -n 1 $WATCHLIST)"
 
 while true; do
-  if ! pgrep -x "ani-cli" > /dev/null; then
+  if ! pgrep -x "mpv" > /dev/null; then
     break
   fi
   watching=$(playerctl metadata xesam:title 2>/dev/null) # Get current title
