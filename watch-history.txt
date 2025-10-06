@@ -46,3 +46,4 @@ The Boondocks (2005) - S01E07 - A Huey Freeman Christmas (1080p HMAX WEB-DL x265
 The Boondocks (2005) - S01E08 - The Real (1080p HMAX WEB-DL x265 YOGI).mkv
 The Boondocks (2005) - S01E09 - Return of the King (1080p HMAX WEB-DL x265 YOGI).mkv
 The Boondocks (2005) - S01E10 - The Itis (1080p HMAX WEB-DL x265 YOGI).mkv
+Fedora 42 how to install video codecs using RPM Fusion tutorial - July 2025 - 9da9f4d7
